@@ -43,12 +43,13 @@ function sendMsg() {
     if(val == ""){
         return;
     }
+    // 显示本用户的所输入的消息
     appendMsg("user", val);
     msg.value = "";
 
     var xhr = new XMLHttpRequest();
     function text() {
-        // 在这里面不能直接向图灵机器人发送数据 以为这样会跨域 浏览器会拒绝请求
+        // 在这里面不能直接向图灵机器人发送数据 因为这样会跨域 浏览器会拒绝请求
         // 可以自己写一个代理服务器 让自己的服务器向图灵机器人请求 这样就不涉及到浏览器
         // 就不存在跨域问题
         // var data = {

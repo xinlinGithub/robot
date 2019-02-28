@@ -29,6 +29,7 @@ function robot(request, response) {
         },function(error, rep, body){
             if(!error && rep.statusCode == 200) {
                 // 在后端进行跨域 不涉及浏览器 直接设置响应头 让浏览器可以访问所有域
+                // 从后端跨域拿到他的数据 再发送到前端
                 var head = {
                     "Access-Control-Allow-Origin": "*",//接受哪些域
                     "Access-Control-Allow-Methods": "get",//那种请求方式
